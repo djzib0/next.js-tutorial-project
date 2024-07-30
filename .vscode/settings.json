@@ -1,0 +1,16 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "next.js-tutorial\\src\\components\\",
+            "color": "foldercolorizer.LightSalmon2"
+        },
+        {
+            "folderPath": "next.js-tutorial\\src\\lib\\",
+            "color": "foldercolorizer.DeepSkyBlue"
+        },
+        {
+            "folderPath": "next.js-tutorial\\src\\app\\",
+            "color": "foldercolorizer.GreenYellow"
+        }
+    ]
+}
