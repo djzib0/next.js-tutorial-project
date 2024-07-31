@@ -25,7 +25,7 @@ const Links = () => {
   ];
 
   return (
-    <div>
+    <div className="flex items-center gap-2.5" >
       {links.map((link: LinkObject) => {
         return (
           <Link href={link.path} key={link.title + link.path}>{link.title}</Link>
