@@ -1,8 +1,16 @@
 import React from 'react'
+import styles from "./home.module.css"
 
-export default function Home() {
+export default function Homepage() {
 
   return (
-    <div>Home Page</div>
+    <div className=''>
+      <div className={styles.textContainer}>
+        text test
+      </div>
+      <div className={styles.imageContainer}>
+        image test
+      </div>
+    </div>
   )
 }
