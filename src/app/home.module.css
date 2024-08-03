@@ -1,7 +1,52 @@
-.textContainer {
-    background-color: pink;
+.container {
+    display: flex;
+    gap: 100px;
+    color: white
 }
 
-.imageContainer {
-    background-color: limegreen;
+.textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+}
+
+.desc {
+    font-size: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.button:first-child {
+    background-color: var(--btn);
+    color: var(--text)
+}
+
+.button {
+    padding: 20px;
+    min-width: 120px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+.imgContainer {
+    flex: 1;
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.brands {
+    position: relative;
+    width: 500px;
+    height: 50px;
+    filter: grayscale(1);
 }
