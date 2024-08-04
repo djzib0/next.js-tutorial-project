@@ -5,6 +5,7 @@ import Link from "next/link";
 import NavLink from "./navLink/NavLink";
 // types import
 import { LinkObject } from "@/lib/types/types";
+import Image from "next/image";
 
 const links = [
   {
@@ -55,10 +56,13 @@ const Links = () => {
           )
         }
       </div>
-      <button 
+      <Image 
+        src={"/menu.png"}
+        alt="hamburger button"
+        width={30}
+        height={30}
         onClick={() => setOpen(prevState => !prevState)}
-        className="flex md:hidden items-center gap-2.5"
-      >Menu</button>
+      />
       {open && (
         <div className="flex md:hidden position: absolute top-24 right-0 w-1/2 flex-col items-center justify-center gap-2.5">
           {links.map((link) => {

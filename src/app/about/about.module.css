@@ -1,5 +1,57 @@
 .container {
-    position: absolute;
-    width: 200px;
-    height: 200px;
+    display: flex;
+    gap: 100px;
+}
+
+.textContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.imgContainer {
+    display: flex;
+    flex: 1;
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.subtitle {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 54px;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box > h1 {
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--btn);
+}
+
+.img {
+    object-fit: contain;
 }
