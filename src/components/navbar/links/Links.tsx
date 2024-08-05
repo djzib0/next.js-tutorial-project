@@ -62,6 +62,7 @@ const Links = () => {
         width={30}
         height={30}
         onClick={() => setOpen(prevState => !prevState)}
+        className="flex md:hidden"
       />
       {open && (
         <div className="flex md:hidden position: absolute top-24 right-0 w-1/2 flex-col items-center justify-center gap-2.5">

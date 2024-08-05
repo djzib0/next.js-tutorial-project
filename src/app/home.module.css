@@ -50,3 +50,24 @@
     height: 50px;
     filter: grayscale(1);
 }
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 64px;
+    }
+
+    .buttons {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brands {
+        width: 100%;
+    }
+}
