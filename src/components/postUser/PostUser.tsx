@@ -10,6 +10,8 @@ const getUser = async (userId: string) => {
   return res.json();
 }
 
+// time stamp 2:28:57
+
 const PostUser = async ({userId} : {userId: string}) => {
 
   const user = await getUser(userId);
