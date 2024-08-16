@@ -1,25 +1,31 @@
-import styles from "./postUser.module.css"
+import styles from "./postUser.module.css";
+import { getUser } from "@/lib/data";
 
-const getUser = async (userId: string) => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
 
-  if (!res.ok) {
-    throw new Error("Something went wrong")
-  }
+// FETCH DATA WITH AN API
+// const getUser = async (userId: string) => {
+//   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {cache: 'no-store'})
 
-  return res.json();
+//   if (!res.ok) {
+//     throw new Error("Something went wrong")
+//   }
+
+//   return res.json();
+// }
+
+type PostUserProps = {
+
 }
 
-// time stamp 2:28:57
+const PostUser = async ({userId} : {userId: number | undefined}) => {
 
-const PostUser = async ({userId} : {userId: string}) => {
 
   const user = await getUser(userId);
 
   return (
     <div className={styles.container}>
       <span className={styles.title}>Author</span>
-      <span className={styles.username}>{user.username}</span>
+      <span className={styles.username}>{user && user.name}</span>
     </div>
   )
 }
