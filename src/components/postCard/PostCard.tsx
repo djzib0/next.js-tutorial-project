@@ -7,14 +7,14 @@ export const PostCard = ({post} : {post: PostObject}) => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
-        <div className={styles.imgContainer}>
+        {post.img && <div className={styles.imgContainer}>
           <Image 
-            src={"https://images.pexels.com/photos/27302823/pexels-photo-27302823/free-photo-of-talerz-jagody-owoc-widok-z-gory.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"}
+            src={post.img}
             alt="post picture"
             fill
             className={styles.img}
           />
-        </div>
+        </div>}
         <span className={styles.date}>04.08.2024</span>
       </div>
       <div className={styles.bottom}>
