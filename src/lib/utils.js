@@ -1,8 +1,6 @@
 // import mongoose from 'mongoose';
 const { default: mongoose } = require("mongoose")
 
-// time stamp 2:53:12
-
 const connection = {};
 
 export const connectToDb = async () => {

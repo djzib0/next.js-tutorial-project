@@ -20,14 +20,11 @@ const BlogPage = async () => {
   // FETCH DATA WITHOUT AN API
   const posts = await getPosts()
 
-
-  // time stamp 2:38:55
-
   return (
     <div className={styles.container}>
-      {posts && posts.map((post: {userId: number, id: number, title: string, body: string}) => {
+      {posts && posts.map((post: {userId: number, slug: number, title: string, body: string, createdAt: Date}) => {
         return (
-          <div className={styles.post} key={post.id}>
+          <div className={styles.post} key={post.slug}>
             <PostCard post={post}/>
           </div>
         )

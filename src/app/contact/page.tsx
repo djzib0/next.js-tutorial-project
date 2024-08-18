@@ -1,7 +1,11 @@
-'use client'
-
 import Image from 'next/image'
 import styles from './contact.module.css'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact page",
+  description: "Next.js starter app description",
+};
 
 const ContactPage = () => {
 
@@ -9,8 +13,6 @@ const ContactPage = () => {
 
   console.log(a);
 
-  // TODO
-  // timestamp is 2:04
 
   return (
     <div className={styles.container}>

@@ -5,8 +5,10 @@ export type LinkObject = {
 
 export type PostObject = {
     userId: number;
-    id: number;
+    slug: number;
     title: string;
     body: string;
     img?: string;
+    desc?: string;
+    createdAt: Date;
 }

@@ -19,9 +19,9 @@ export const PostCard = ({post} : {post: PostObject}) => {
       </div>
       <div className={styles.bottom}>
         <h1 className={styles.title}>{post.title}</h1>
-        <p className={styles.desc}>{post.body}</p>
+        <p className={styles.desc}>{post.desc}</p>
         <Link 
-          href={`/blog/${post.id}`}
+          href={`/blog/${post.slug}`}
           className={styles.link}
           >READ MORE</Link>
       </div>
