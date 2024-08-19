@@ -5,15 +5,15 @@ import { Suspense } from "react"
 import { getPost } from "@/lib/data";
 
 // FETCH DATA WITH AN API
-// const getSinglePost = async (slug: string) => {
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`)
+const getSinglePost = async (slug: string) => {
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`)
 
-//   if (!res.ok) {
-//     throw new Error("Something went wrong")
-//   }
+  if (!res.ok) {
+    throw new Error("Something went wrong")
+  }
 
-//   return res.json();
-// }
+  return res.json();
+}
 
 // const getUser = async (userId: string) => {
 //   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
@@ -41,11 +41,11 @@ const SinglePostPage = async ({params} : {params: {slug: string}}) => {
   const {slug} = params;
 
   // FETCH DATA WITH AN API
-  // const post = await getSinglePost(slug);
+  const post = await getSinglePost(slug);
 
 
   // FETCH DATA WITHOUT AN API
-  const post = await getPost(slug);
+  // const post = await getPost(slug);
 
   console.log(post)
 
