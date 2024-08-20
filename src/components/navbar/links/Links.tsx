@@ -6,6 +6,7 @@ import NavLink from "./navLink/NavLink";
 // types import
 import { LinkObject } from "@/lib/types/types";
 import Image from "next/image";
+import { handleGithubLogout } from "@/lib/actions";
 
 const links = [
   {
@@ -46,10 +47,15 @@ const Links = () => {
         {session ? (
           <>
             {isAdmin && 
-              <NavLink item={{title: "Admin", path: "/admin"}} />}
+              <NavLink item={{title: "Admin", path: "/admin"}} />
+            }
+            <form action={handleGithubLogout}>
               <button 
                 className="p-2.5 cursor-pointer font-bold bg-white text-slate-900 rounded-sm"
-                >Logout</button>
+                >
+                Logout
+              </button>
+            </form>
           </>
           ) : (
             <NavLink item={{title: "Login", path: "/login"}} />

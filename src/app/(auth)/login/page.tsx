@@ -1,14 +1,6 @@
-import { signIn } from '@/lib/auth';
-import React from 'react'
+import { handleGithubLogin } from '@/lib/actions';
 
-const LoginPage = () => {
-
-  const handleGithubLogin = async () => {
-    "use server";
-    await signIn("github")
-  }
-
-  // timestamp 3:33:22
+const LoginPage = async () => {
 
   return (
     <div>
