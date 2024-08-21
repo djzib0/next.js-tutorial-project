@@ -7,6 +7,7 @@ import NavLink from "./navLink/NavLink";
 import { LinkObject } from "@/lib/types/types";
 import Image from "next/image";
 import { handleGithubLogout } from "@/lib/actions";
+import { Session } from "next-auth";
 
 const links = [
   {
@@ -27,13 +28,19 @@ const links = [
   },
 ];
 
-const Links = () => {
+interface Session {
+  user : {
+    isAdmin?: boolean
+  }
+}
+
+const Links = ({session}: {session: Session}) => {
 
   //TEMPORARY
-  const session = true;
   const isAdmin = true;
 
   const [open, setOpen] = useState(false);
+  console.log(session)
 
   return (
     <div>
@@ -44,11 +51,9 @@ const Links = () => {
           )
         })
       }
-        {session ? (
+        {session?.user ? (
           <>
-            {isAdmin && 
-              <NavLink item={{title: "Admin", path: "/admin"}} />
-            }
+              {session.user?.isAdmin && <NavLink item={{title: "Admin", path: "/admin"}} />}
             <form action={handleGithubLogout}>
               <button 
                 className="p-2.5 cursor-pointer font-bold bg-white text-slate-900 rounded-sm"
