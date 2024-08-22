@@ -10,9 +10,7 @@ const NavigationTestPage = () => {
   const pathName = usePathname();
   const searchParams = useSearchParams();
 
-  console.log(params, "params")
-  console.log(pathName, "path name")
-  console.log(searchParams, " search params")
+
 
   const q = searchParams.get("q")
   console.log(q, " q value")
@@ -20,7 +18,6 @@ const NavigationTestPage = () => {
   const router = useRouter();
 
   const handleClick = (route: string) => {
-    console.log("clicked")
     router.refresh();
   }
 

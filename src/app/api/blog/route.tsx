@@ -3,7 +3,6 @@ import { connectToDb } from "@/lib/utils"
 import { NextResponse } from "next/server";
 
 export const GET = async (request: any) => {
-  console.log(request)
   try {
     connectToDb();
     const posts = await Post.find();

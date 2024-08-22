@@ -7,7 +7,6 @@ import NavLink from "./navLink/NavLink";
 import { LinkObject } from "@/lib/types/types";
 import Image from "next/image";
 import { handleGithubLogout } from "@/lib/actions";
-import { Session } from "next-auth";
 
 const links = [
   {
@@ -34,13 +33,12 @@ interface Session {
   }
 }
 
-const Links = ({session}: {session: Session}) => {
+const Links = ({session}: {session: Session | any}) => {
 
   //TEMPORARY
   const isAdmin = true;
 
   const [open, setOpen] = useState(false);
-  console.log(session)
 
   return (
     <div>

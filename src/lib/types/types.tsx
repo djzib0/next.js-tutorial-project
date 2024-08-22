@@ -12,3 +12,11 @@ export type PostObject = {
     desc?: string;
     createdAt: Date;
 }
+
+export type UserType = {
+    username: string,
+    emai: string,
+    password: string,
+    img: string,
+    isAdmin: boolean
+}
