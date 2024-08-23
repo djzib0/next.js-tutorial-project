@@ -17,28 +17,10 @@
     border-radius: 5px;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-}
 
-.form input {
+.github {
+    width: 100%;
     padding: 20px;
-    background-color: var(--bg);
-    color: white;
-    border: none;
-    border-radius: 5px;
-
-}
-
-.form button {
-    padding: 20px;
+    background: whitesmoke;
     cursor: pointer;
-    background-color: var(--btn);
-    color: var(--textColor);
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
 }

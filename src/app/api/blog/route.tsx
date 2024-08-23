@@ -12,5 +12,3 @@ export const GET = async (request: any) => {
     throw new Error("Failed to fetch posts!")
   }
 }
-
-// time stamp 3:28:19
